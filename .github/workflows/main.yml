@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout du code
-        uses: actions/checkout@v4
-
-      - name: Build de l'application
-        run: echo "Build en cours..."
-
+      - name: Configurer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Vérifier la version
+        run: node --version
   # ─────────────────────────────────────────
   # JOB 2 : Test
   # ─────────────────────────────────────────
